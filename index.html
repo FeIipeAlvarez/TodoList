@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="container__header">
+            <h1 class="container__title">To do List</h1>
+        </div>
+
+        <div class="container__body">
+            <div class="taskInformation">
+                <form class="taskForm" id="taskForm">
+
+                    <input class="taskForm__element taskForm__input" type="text" name="taskName" id="task"
+                        placeholder="Type a task">
+
+                    <input class="taskForm__element taskForm__input" id="dateLimit" type="datetime-local"
+                        name="dateLimit">
+
+
+                    <div class="taskColors taskForm__element">
+                        <input type="radio" name="colorTask" id="taskRed" class="taskColors__check" value="#ff4646">
+                        <label class="taskColors__color" for="taskRed"></label>
+
+                        <input type="radio" name="colorTask" id="taskBlue" class="taskColors__check" value="#153e90">
+                        <label class="taskColors__color taskColors__color--blue" for="taskBlue"></label>
+
+                        <input type="radio" name="colorTask" id="taskGreen" class="taskColors__check" value="#61b15a">
+                        <label class="taskColors__color taskColors__color--green" for="taskGreen"></label>
+                    </div>
+
+                    <button class="taskForm__element button" id="btnTaskForm">ADD</button>
+
+                </form>
+            </div>
+
+            <div class="divTodoList" id="divTodoList">
+                <div class="taskFilter" id="taskFilter">
+                    <div class="taskFilter__option taskFilter__option--first">Completed</div>
+                    <div class="taskFilter__option">Current</div>
+                    <div class="taskFilter__option taskFilter__option--last">Expired</div>
+                </div>
+                <ul class="todoList" id="todoList"></ul>
+                <ul class="todoList" id="todoListCompleted"></ul>
+                <ul class="todoList" id="todoListExpired"></ul>
+                <span id="messageNoTasks" class="divTodoList__message">List empty.</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
