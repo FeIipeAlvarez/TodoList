@@ -196,7 +196,6 @@ d.addEventListener("DOMContentLoaded", () => {
 d.getElementById("taskFilter").addEventListener('click', e => {
 
     listTasksSaved();
-    // e.target.classList.add('taskFiler__option--active');
     styleSelectedFilterOption(e.target);
     switch (e.target.textContent) {
         case 'Completed':
