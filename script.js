@@ -241,12 +241,16 @@ d.getElementById("divTodoList").addEventListener('click', e => {
     const taskIdDelete = e.target.parentElement.parentElement.parentElement.id;
 
     if (e.target.classList.contains('button__img--delete')) {//If click on removeButton.
-        task.deleteTask(taskIdDelete);
-        showMessageEmpty();
+        if (confirm("Are you sure delete the task?")) {
+            task.deleteTask(taskIdDelete);
+            showMessageEmpty();
+        }
     } else if (e.target.classList.contains('button__img--complete')) {
-        task.completeTask(taskIdDelete);
-        showMessageEmpty();
+        if (confirm("Are you sure complete the task?")) {
 
+            task.completeTask(taskIdDelete);
+            showMessageEmpty();
+        }
     }
 });
 
