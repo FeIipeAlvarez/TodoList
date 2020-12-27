@@ -61,12 +61,6 @@ class Task {
             <img src="img/check2.svg" class = "button__img button__img--complete" >
         </div>` : '';
 
-
-        // completerTask =
-        //  `<div class = "todoList__button">
-        //     <img src="img/check2.svg" class = "button__img button__img--complete" >
-        // </div>  `;
-
         return `
         <li class="todoList__item" id="${this.id}" style="background-color: ${this.color};">
             <span class="todoList__description">${this.name}</span>
@@ -147,8 +141,6 @@ class Task {
 
     updateStatus(taskId, status) {
 
-        const tasks = Array.from(d.getElementById("todoList").children);
-        // const taskSelected = tasks.find(task => task.id == taskId);
         const taskSelected = JSON.parse(localStorage.getItem(taskId));
 
         taskSelected.status = status;
